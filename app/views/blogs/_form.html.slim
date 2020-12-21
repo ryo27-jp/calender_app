@@ -1,0 +1,25 @@
+.modal#blogs-modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title コメント編集
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  ×
+      .modal-body
+        = form_with(model: @blog, local: true) do |form|
+
+          div class="title"
+            = form.label :title
+            = form.text_field :title
+
+            div class="time"
+            = form.label :start_time
+            = form.datetime_select :start_time
+
+          div class="content"
+            = form.label :content
+            = form.text_field :content
+
+
+          div class="submit"
+            = form.submit

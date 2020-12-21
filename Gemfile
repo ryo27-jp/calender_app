@@ -40,6 +40,8 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'jquery-rails'
 gem 'bootstrap'
+gem 'popper_js'
+gem 'rails-ujs'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

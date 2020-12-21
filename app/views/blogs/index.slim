@@ -2,6 +2,7 @@ p#notice
   = notice
 h1
   | 自分の日記
+= link_to '日記をかく', new_blog_path, remote: true, class: 'btn btn-ls btn-primary'
 table
   thead
     tr
@@ -24,9 +25,11 @@ table
         td
           = link_to 'Destroy',blog_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }
 br
-= link_to '日記をかく', new_blog_path
+
 = month_calendar events: @blogs do |date, blogs|
   = date.day
   - blogs.each do |blog|
     div
       = link_to blog.title, blog
+
+<div id="blogs-modal1", class="modal fade" tabindex="-1" rale="dialog", aria-hidden="true"><div>
